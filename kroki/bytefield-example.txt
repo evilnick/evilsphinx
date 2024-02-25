@@ -1,0 +1,15 @@
+(defattrs :bg-green {:fill "#a0ffa0"})
+(defattrs :bg-yellow {:fill "#ffffa0"})
+(defattrs :bg-pink {:fill "#ffb0a0"})
+(defattrs :bg-cyan {:fill "#a0fafa"})
+(defattrs :bg-purple {:fill "#e4b5f7"})
+
+(defn draw-group-label-header
+  "Creates a small borderless box used to draw the textual label headers
+  used below the byte labels for remotedb message diagrams.
+  Arguments are the number of columns to span and the text of the
+  label."
+  [span label]
+  (draw-box (text label [:math {:font-size 12}]) {:span    span
+                                                  :borders #{}
+                                                  :height  14}))

@@ -1,0 +1,25 @@
+    @startmindmap
+    + OS
+    ++ Unix
+    +++ Mach
+    ++++ NeXt 
+    ++++ Darwin
+    +++ BSD
+    ++++ OpenBSD
+    ++++ FreeBSD
+    +++ Linux
+    ++++ Debian
+    +++++ Ubuntu
+    ++++++ Kubuntu
+    +++++ Raspbian
+    +++++ SteamOS
+    ++++ Gentoo
+    ++++ SlackWare
+    ++++ RHEL
+    +++++ Fedora
+    -- Windows 95
+    -- Windows 98
+    -- Windows NT
+    --- Windows 8
+    --- Windows 10
+    @endmindmap
