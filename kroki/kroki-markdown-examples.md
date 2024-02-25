@@ -29,7 +29,14 @@ to satisfy sphinx, but it is possible and does work.
 
 C4 is hierarchical model for representing computer systems (see the [C4 website](https://c4model.com/)).
 
-Engineers go wild for tools like [Structurizr]() which turn expressions of models into nice hierarchical diagrams. These are diagrams that were competed for **Canonical Kubernetes**. The original source is [this Structurizr .dsl file](./c4.dsl). This could be used directly, but it is slightly harder to control the output, plus like any 'generator' tool going back to Netscape Composer, it tends to fill the file with useless cruft. The examples presented here are the views extracted from the DSL in PlantUML format (here's an [example file](./k8s/overview.puml)).
+Engineers go wild for tools like [Structurizr](https://structurizr.com/) which
+turn expressions of models into nice hierarchical diagrams. These are diagrams
+that were competed for **Canonical Kubernetes**. The original source is [this
+Structurizr .dsl file](./c4.dsl). This could be used directly, but it is
+slightly harder to control the output, plus like any 'generator' tool going
+back to Netscape Composer, it tends to fill the file with useless cruft. The
+examples presented here are the views extracted from the DSL in PlantUML format
+(here's an [example file](./k8s/overview.puml)).
 
 It renders like this:
 
