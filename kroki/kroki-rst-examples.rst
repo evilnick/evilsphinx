@@ -115,38 +115,7 @@ PlantUML can be themed
     b -> c
     @enduml
 
-.. kroki::
-    :type: plantuml
-    
-    @startmindmap
-    + OS
-    ++ Unix
-    +++ Mach
-    ++++ NeXt 
-    ++++ Darwin
-    +++ BSD
-    ++++ OpenBSD
-    ++++ FreeBSD
-    +++ Linux
-    ++++ Debian
-    +++++ Ubuntu
-    ++++++ Kubuntu
-    +++++ Raspbian
-    +++++ SteamOS
-    ++++ Gentoo
-    ++++ SlackWare
-    ++++ RHEL
-    +++++ Fedora
-    -- Windows 95
-    -- Windows 98
-    -- Windows NT
-    --- Windows 8
-    --- Windows 10
-    @endmindmap
-
-.. kroki::
-    :type: plantuml
-    :filename: ./mm.puml
+.. kroki:: ./mm.puml png
 
 .. kroki::
     :type: plantuml
@@ -267,3 +236,16 @@ bytefield
     (draw-box (text "length" [:math] [:sub 2]) {:span 4})
     (draw-gap "Unknown bytes" {:min-label-columns 6})
     (draw-bottom)
+
+Vega
+----
+
+.. kroki:: 
+    :type: vega
+    :filename: ./vega-example2.vg
+
+
+Excalidraw
+----------
+
+.. kroki:: evil.excalidraw svg
