@@ -17,4 +17,5 @@ Test pages are linked below:
    :titlesonly:
 
    kroki/kroki-rst-examples.rst
+   kroki/kroki-markdown-examples.md
 

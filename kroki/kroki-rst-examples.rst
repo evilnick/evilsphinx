@@ -32,11 +32,34 @@ Mermaid can itself be used for different types of diagram.
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
-    A task           :a1, 2024-01-01, 30d
-    Another task     :after a1, 20d
-    section Another
-    Task in sec      :2024-01-12, 12d
-    another task     :24d
+    Do things           :a1, 2024-01-01, 30d
+    Do something to the things    :after a1, 20d
+    section Mgmt
+    Think of things     :2024-01-12, 10d
+    have meetings    :24d
+
+It's possible to include mermaid directives to adjust things like the theme ::
+
+    .. kroki::
+        :type: mermaid
+        
+        %%{
+        init: {
+            "theme": "forest",
+            "fontFamily": "ubuntu",
+            "logLevel": "info"
+        }
+        }%%
+        flowchart TD
+        A[Start] --> B{Is the code finished?}
+        B -->|Yes| C[Great!]
+        B --->|No| G[Do another Pulse ]
+        G --> B
+        C --> D{Is it Friday?}
+        D ----> |Yes| E[Release!!!]
+        D -->|No| F[Run more tests]
+        F --> D
+
 
 .. kroki::
     :type: mermaid
@@ -48,7 +71,7 @@ Mermaid can itself be used for different types of diagram.
         "logLevel": "info"
     }
     }%%
-    flowchart TD
+    flowchart LR
     A[Start] --> B{Is the code finished?}
     B -->|Yes| C[Great!]
     B --->|No| G[Do another Pulse ]
@@ -61,8 +84,34 @@ Mermaid can itself be used for different types of diagram.
 NWDiag
 ------
 
+NWdiag is great for... network diagrams::
+
+    .. kroki::
+        :type: nwdiag
+
+        nwdiag {
+            network dmz {
+                address = "210.x.x.x/24"
+
+                web01 [address = "210.x.x.1"];
+                app01 [address = "210.x.x.8"];
+            }
+            network internal {
+                address = "172.x.x.x/24";
+
+                web01 [address = "172.x.x.1"];
+                app01 [address = "172.x.x.2"];
+                k8s01;
+                k8s02;
+                COS;
+            }
+            }
+
+...which produces something like this:
+
 .. kroki::
     :type: nwdiag
+    :name: An awesome network diagram
 
     nwdiag {
         network dmz {
@@ -106,14 +155,34 @@ PlantUML can be themed
 
 .. kroki::
     :type: plantuml
-    :align: center
-    :class: "mermaid"
 
     @startuml
     !theme amiga from https://raw.githubusercontent.com/plantuml/plantuml/master/themes
     a -> b
     b -> c
     @enduml
+
+.. kroki::
+    :type: plantuml
+
+    @startuml
+    !theme crt-amber from https://raw.githubusercontent.com/plantuml/plantuml/master/themes
+    a -> b
+    b -> c
+    @enduml
+
+.. kroki::
+    :type: plantuml
+
+    @startuml
+    !theme reddress-lightorange from https://raw.githubusercontent.com/plantuml/plantuml/master/themes
+    a -> b
+    b -> c
+    @enduml
+
+You can also... **INCLUDE** the files::
+
+    .. kroki:: ./mm.puml png
 
 .. kroki:: ./mm.puml png
 
@@ -154,6 +223,7 @@ PlantUML can be themed
     Rel_Back(email_system, backend_api, "Sends e-mails using", "sync, SMTP")
     Rel_Neighbor(backend_api, banking_system, "Uses", "sync/async, XML/HTTPS")
     @enduml
+
 
 bytefield
 ---------
@@ -243,7 +313,6 @@ Vega
 .. kroki:: 
     :type: vega
     :filename: ./vega-example2.vg
-
 
 Excalidraw
 ----------
