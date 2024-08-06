@@ -18,4 +18,5 @@ Test pages are linked below:
 
    kroki/kroki-rst-examples.rst
    kroki/kroki-markdown-examples.md
+   tests/image-speed.md
 
