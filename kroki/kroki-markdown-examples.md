@@ -4,6 +4,8 @@ Well, more specifically, Myst examples. It is slightly more of a pain doing
 this in Myst because everything has to be wrapped up in nonsense and indented
 to satisfy sphinx, but it is possible and does work.
 
+<!--
+
 ```{kroki}
     :type: mermaid
     
@@ -50,3 +52,5 @@ The same master DSL file was used to generate all the required parts of the C4 m
 
 ```{kroki} ./k8s/k8s-context.puml
 ```
+
+-->

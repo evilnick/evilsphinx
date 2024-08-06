@@ -16,7 +16,5 @@ Test pages are linked below:
 .. toctree:: 
    :titlesonly:
 
-   kroki/kroki-rst-examples.rst
-   kroki/kroki-markdown-examples.md
    tests/image-speed.md
 
